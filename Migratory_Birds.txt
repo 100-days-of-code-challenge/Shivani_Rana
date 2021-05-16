@@ -1,0 +1,26 @@
+ques- Migratory Birds
+https://www.hackerrank.com/challenges/migratory-birds/problem
+__________________________________________________________________
+int migratoryBirds(int arr_count, int* arr) {
+   int  count =0;
+   int array[5]={0,0,0,0,0};
+   int l;
+   for(int i=0;i<arr_count;i++)
+   {
+       int f = arr[i];
+       array[f-1] += 1;
+       
+   }
+   int max = array[0];
+   for(int i=0;i<5;i++)
+   {
+      if(max<array[i])
+      {
+          max = array[i];
+          l=i;
+      } 
+   }
+   
+    
+return l+1;
+}
