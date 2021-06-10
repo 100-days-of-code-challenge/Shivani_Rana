@@ -1,10 +1,12 @@
-gfg question:- paranthesis checker
-https://practice.geeksforgeeks.org/problems/parenthesis-checker2744/1
-_______________________________________________________________________ 
-
-
-bool ispar(string x)
-    {
+class Solution {
+public:
+    bool isValid(string x) {
+        
+        
+        
+        
+        
+       
         stack<char>s;
         int l = x.size();
         for(int i=0;i<l;i++)
@@ -16,16 +18,16 @@ bool ispar(string x)
             }
             else 
             {
-                if(!s.empty())
+                if(s.empty())
                 return false;
                 
-                if(c = ')' && s.top() != '(')
+                if(c == ')' && s.top() != '(')
                 return false;
                 
-                  if(c = '}' && s.top() != '{')
+                  if(c == '}' && s.top() != '{')
                     return false;
                 
-                  if(c = ']' && s.top() != '[')
+                  if(c == ']' && s.top() != '[')
                       return false;
                 
                 s.pop();
@@ -36,4 +38,8 @@ bool ispar(string x)
         // Y our code here
         
         return s.empty();
+    
+
+        
     }
+};

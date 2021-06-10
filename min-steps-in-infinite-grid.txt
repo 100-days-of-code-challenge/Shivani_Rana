@@ -1,0 +1,19 @@
+interviewbit problem
+https://www.interviewbit.com/problems/min-steps-in-infinite-grid/
+______________________________________________________________________
+
+int Solution::coverPoints(vector<int> &A, vector<int> &B) {
+   int count =0;
+   
+   for(int i=0;i<A.size()-1;i++)
+   {
+       int a = abs(A[i]-A[i+1]);
+       int b = abs(B[i]-B[i+1]);
+       if(a>b)
+       count = count + a;
+        
+        else
+        count = count +b;
+   }
+  return count;
+}
